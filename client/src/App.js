@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 
 import { listLogEntries } from './api';
+import LogEntryForm from './components/LogEntryForm.js';
+
 const App = () => {
   const [logEntries, setLogEntries] = useState([]);
   const [showPopup, setShowPopup] = useState({});
@@ -98,7 +100,7 @@ const App = () => {
         <>
           <Marker latitude={addEntryLocation.lat} longitude={addEntryLocation.long}>
             <div>
-              <img
+              {/* <img
                 src='https://i.imgur.com/y0G5YTX.png'
                 className='markerImg'
                 alt='ping'
@@ -106,7 +108,21 @@ const App = () => {
                   height: `${2 * viewport.zoom}px`,
                   width: `${2 * viewport.zoom}px`,
                 }}
-              />
+              /> */}
+              <svg
+                viewBox='0 0 24 24'
+                width='30'
+                height='30'
+                stroke='currentColor'
+                strokeWidth='1.5'
+                fill='cyan'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                className='markerImg'
+              >
+                <path d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'></path>
+                <circle cx='12' cy='10' r='3'></circle>
+              </svg>
             </div>
           </Marker>
           <Popup
@@ -121,6 +137,7 @@ const App = () => {
           >
             <div className='popup'>
               <h3>Add your new log entry</h3>
+              <LogEntryForm />
             </div>
           </Popup>
         </>

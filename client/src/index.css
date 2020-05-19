@@ -26,5 +26,32 @@ body {
   transform: translate(-50%, -100%);
 }
 .popup {
-  max-width: 150px;
+  font-weight: bold;
+  text-align: center;
+  width: 250px;
+  padding: 0.1rem;
+}
+
+.entryForm > label,
+input,
+textarea {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0;
+  display: block;
+  width: 100%;
+}
+.entryForm > button {
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+}
+#root
+  > div
+  > div
+  > div:nth-child(2)
+  > div
+  > div.mapboxgl-popup.mapboxgl-popup-anchor-left
+  > div.mapboxgl-popup-content {
+  border-radius: 8px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
