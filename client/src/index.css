@@ -52,6 +52,14 @@ textarea {
   > div
   > div.mapboxgl-popup.mapboxgl-popup-anchor-left
   > div.mapboxgl-popup-content {
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.error {
+  color: #f05305;
+}
+
+.popup > img {
+  width: 50%;
 }
